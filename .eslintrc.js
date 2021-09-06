@@ -1,0 +1,80 @@
+module.exports = {
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  plugins: ['prettier'],
+  rules: {
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
+    'react/jsx-no-bind': [
+      'warn',
+      {
+        allowBind: false,
+      },
+    ],
+    'react/forbid-prop-types': ['warn'],
+    'react/require-default-props': ['warn'],
+    'import/prefer-default-export': 'warn',
+    'import/no-named-as-default': 'off',
+    'no-confusing-arrow': 'off',
+    'no-nested-ternary': 'off',
+    'no-unused-expressions': 'warn',
+    'no-shadow': 'warn',
+    'no-await-in-loop': 'warn',
+    'no-underscore-dangle': ['off'],
+    'max-len': [1],
+    'no-param-reassign': 'warn',
+    'brace-style': 'warn',
+    'no-return-assign': 'warn',
+    'arrow-body-style': 'warn',
+    'no-use-before-define': 'warn',
+    'global-require': 'off',
+    'no-unused-vars': 'error',
+    'template-curly-spacing': 'off',
+    'object-curly-spacing': [
+      'error',
+      'always',
+      { arraysInObjects: false, objectsInObjects: false },
+    ],
+    indent: ['warn', 2, { ignoredNodes: ['TemplateLiteral'], SwitchCase: 1 }],
+    camelcase: [
+      'error',
+      {
+        properties: 'never',
+        allow: ['^UNSAFE_'],
+      },
+    ],
+    'class-methods-use-this': [
+      'error',
+      {
+        exceptMethods: [
+          'render',
+          'getInitialState',
+          'getDefaultProps',
+          'getChildContext',
+          'componentWillMount',
+          'componentDidMount',
+          'componentWillReceiveProps',
+          'shouldComponentUpdate',
+          'componentWillUpdate',
+          'componentDidUpdate',
+          'componentWillUnmount',
+          'UNSAFE_componentWillMount',
+          'UNSAFE_componentWillReceiveProps',
+          'UNSAFE_componentWillUpdate',
+        ],
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        jsxBracketSameLine: true,
+        singleQuote: true,
+        trailingComma: 'all',
+        arrowParens: 'avoid',
+      },
+    ],
+  },
+};
